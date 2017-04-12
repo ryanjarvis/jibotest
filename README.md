@@ -12,7 +12,7 @@ This repo contains interpretations of the Jibo 2017 Programming Challenge, each 
 
 Futhermore, the algorithm used in "solving" the checkerboard is the same and is a single-pass algorithm.
 
-##jiboex1
+## jiboex1
 **Status**: Complete
 
 This is a minimal self contained Electron app.  To run on OSX:
@@ -26,7 +26,7 @@ Notes:
 * The code is written to encourage the discussion of OOP concepts in JavaScript such as Singletons and Composition vs. Inheritance.
 
 
-##jiboex2
+## jiboex2
 **Status**: In Progress
 
 This is a minimal self contained Electron app written in TypeScript.  To run on OSX:
@@ -41,7 +41,7 @@ Notes:
 * This example is actually an attempt to refactor vanilla JavaScript into TypeScript to encourage a discussion of writing TypeScript as well as pros and cons of using TypeScript.
 * It is currently incomplete as I've discovered TypeScript appears to be more opinionated that I originally thought.
 
-##jiboex3
+## jiboex3
 **Status**: Complete
 
 This is an Electron app communicating with a server over a REST API.  To run on OSX:
@@ -58,7 +58,7 @@ Notes:
 * This example moves the code to construct the board onto a server instead of inside the Electron app.  The board is serialized as JSON and sent to the Electron app to be rendered in Pixi
 
 
-##jiboex4
+## jiboex4
 **Status**: Not Started
 
 This was intended to be an example of either Electron or the server in example 3 calling out to C++.
