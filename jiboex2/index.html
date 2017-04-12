@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Jibo Test</title>
+  </head>
+  <body>
+	  <h1>Jibo Test App</h1>
+	  <div id="mainview">
+		  <div id="gmode">
+			  <p>
+				  First, generate an arrow-filled board by setting the number of rows and columns you want and then clicking the Build button.
+				  The direction of the arrows will be randomized.
+				  Note: you may rebuild the board at any time.
+			  </p>
+			  <label>Desired Rows: <input v-model.number="desired_rows" type="number"></input></label>
+			  <label>Desired Columns: <input v-model.number="desired_cols" type="number"></input></label>
+			  <button v-on:click="build_board">Build</button>
+		  </div>
+		  <div id="amode" v-show="board_loaded">
+			  <p>
+				  Next, click on a square to select a start point and note whether the path from that point will leave the board.
+				  Use the animation controls to start/stop path traversal and verify the result.
+			  </p>
+			  <div >
+				  <p>
+					  Animation Controls: 
+					  <button :disabled="!start_square" v-on:click="start_path_traversal">Start</button> 
+					  <button :disabled="!start_square" v-on:click="stop_path_traversal">Stop</button> 
+					  <button :disabled="!start_square" v-on:click="reset">Reset</button>
+					  Path leads off the board: 
+					  <span v-if="!start_square"> -- </span>
+					  <span v-if="start_square" v-bind:style="{color: start_square.connected_to_home ? 'green' : 'red'}">{{ start_square.connected_to_home }}</span>
+				  </p>
+			  </div>
+			  <div id="canvastest">
+			  </div>
+		  </div>
+	  </div>
+	  <div>
+		  <p>
+			  Tested and verified against Node 7.4.0,
+			  Chrome 56.0.2924.87,
+			  and Electron 1.6.2.
+			  <br/>
+			  You are using node <script>document.write(process.versions.node)</script>,
+			  Chrome <script>document.write(process.versions.chrome)</script>,
+			  and Electron <script>document.write(process.versions.electron)</script>.
+		  </p>
+	  </div>
+	  <script src="vue.js"></script>
+	  <script src="pixi.js"></script>
+	  <script src="index.js"></script>
+  </body>
+</html>

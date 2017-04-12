@@ -1,0 +1,10 @@
+{
+	"compilerOptions": {
+		"lib": [
+			"es7"
+		]
+	},
+	"files": [
+		"index.ts"
+	]
+}
